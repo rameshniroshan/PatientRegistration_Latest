@@ -1,0 +1,195 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Patient_Registration
+build_property.RootNamespace = Patient_Registration
+build_property.ProjectDir = C:\PROJECTS\Patient Registration\Patient Registration\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\PROJECTS\Patient Registration\Patient Registration
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Guardian/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VhcmRpYW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Guardian/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VhcmRpYW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Guardian/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VhcmRpYW5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Guardian/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VhcmRpYW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Guardian/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VhcmRpYW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/LoyaltyPrograms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG95YWx0eVByb2dyYW1zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/LoyaltyPrograms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG95YWx0eVByb2dyYW1zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/LoyaltyPrograms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG95YWx0eVByb2dyYW1zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/LoyaltyPrograms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG95YWx0eVByb2dyYW1zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/LoyaltyPrograms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG95YWx0eVByb2dyYW1zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/InactiveDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcSW5hY3RpdmVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/InactiveEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcSW5hY3RpdmVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/InactivePatients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcSW5hY3RpdmVQYXRpZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/OurPatients/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3VyUGF0aWVudHNcU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Patients/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Patients/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Patients/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Patients/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Patients/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Shared/_LayoutLogged.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dnZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Shared/_LayoutSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Users/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Users/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Users/Signin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcU2lnbmluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PROJECTS/Patient Registration/Patient Registration/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xlgw3uwd9n

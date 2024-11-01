@@ -1,0 +1,181 @@
+﻿@model Patient_Registration.Models.Call_Patients
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+
+<div>
+    <h2>Details of Patient</h2>
+    <hr />
+    <div class="row border border-warning p-4 rounded-3 patientdetails" id="patientDetails">
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.NIC)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.NIC)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.PassportNo)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.PassportNo)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Designation)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Designation)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.Name)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.Name)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Surname)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Surname)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.DOB)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.DOB)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Gender)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Gender)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.ResidentArea)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.ResidentArea)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Nationality)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Nationality)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.Religion)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.Religion)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.GuardianID)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.GuardianID)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.GuardianName)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.GuardianName)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.RelationGuardian)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.RelationGuardian)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.LoyaltyNo)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.LoyaltyNo)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.MemberID)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.MemberID)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.Email)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.Email)</div>
+
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.SpecialConditions)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.SpecialConditions)</div>
+
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.SocialId)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.SocialId)</div>
+
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.LoyaltyProgramId)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.LoyaltyProgramId)</div>
+
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.Active)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.Active)</div>
+
+        <div class="pl-0">
+            <a class="btn btn-success patientDetailsEdit siteButtons" asp-action="Edit" asp-route-id="@Model?.MobileNo">Edit</a>
+        </div>
+    </div>
+    <a class="btn btn-warning mt-4 mb-4 patientdetailsback btnbacktoList" asp-action="Create">Back to List</a>
+   @*  <hr />
+    <dl class="row border border-warning p-4 rounded-3" id="patientDetailss">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.NIC)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.NIC)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PassportNo)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.PassportNo)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ResidentArea)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ResidentArea)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Religion)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Religion)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.GuardianID)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.GuardianID)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.GuardianName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.GuardianName)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.RelationGuardian)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.RelationGuardian)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.LoyaltyNo)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.LoyaltyNo)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.MemberID)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.MemberID)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.SpecialConditions)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.SpecialConditions)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.SocialId)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.SocialId)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+    </dl> *@
+</div>
+

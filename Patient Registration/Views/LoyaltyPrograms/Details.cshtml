@@ -1,0 +1,46 @@
+﻿@model Patient_Registration.Models.Call_LoyaltyPrograms
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+<div class="container">
+    <h2>Details of Loyalty Programme</h2>
+    <hr>
+    <div class="row border border-warning p-4 rounded-3" id="detailsLoyaltyProgramme">
+        <!-- Error Label -->
+        <div class="errorLabel" id="divError"></div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.LoyaltyName)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.LoyaltyName)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.LoyaltyDescription)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.LoyaltyDescription)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Active)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Active)</div>
+        @* <dl class="row">
+            <dt class="col-sm-3 oddrow">
+                @Html.DisplayNameFor(model => model.LoyaltyName)
+            </dt>
+            <dd class="col-sm-9 oddrow">
+                @Html.DisplayFor(model => model.LoyaltyName)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.LoyaltyDescription)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.LoyaltyDescription)
+            </dd>
+            <dt class="col-sm-3 oddrow">
+                @Html.DisplayNameFor(model => model.Active)
+            </dt>
+            <dd class="col-sm-9 oddrow">
+                @Html.DisplayFor(model => model.Active)
+            </dd>
+        </dl> *@
+    </div>
+</div>
+
+<div class="mt-4">
+    <a class="btn btn-info siteButtons" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> 
+    <a class="btn btn-warning loyaltyEditback btnbacktoList" asp-action="Index">Back to List</a>
+</div>

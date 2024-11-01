@@ -1,0 +1,406 @@
+﻿@model Patient_Registration.Models.Call_Patients
+@{
+    ViewData["Title"] = "Edit Inactive Patient";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+
+<div class="container">
+    <h2>Edit Inactive Patients</h2>
+    <hr>
+    <div class="border border-warning p-4 rounded-3">
+        <!-- Error Label -->
+        <div class="errorLabel" id="divError"></div>
+
+        <form asp-action="InactiveEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!-- Row 1: Mobile No and NIC -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.MobileNo)*</label>
+                    <input class="form-control" readonly name="MobileNo" id="MobileNo" value=@Model.MobileNo />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.NIC)</label>
+                    <input class="form-control" name="NIC" id="NIC" value=@Model.NIC />
+                </div>
+            </div>
+            <!-- Row 2: Passport No and Designation -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.PassportNo)</label>
+                    <input class="form-control" name="PassportNo" id="PassportNo" value=@Model.PassportNo />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Designation)*</label>
+                    @* <input class="form-control" name="Designation" id="Designation" value=@Model.Designation /> *@
+                    <select name="Designation" id="AddPatientDesignation" class="form-control" dropzone="true">
+                        <option value="">Select Option</option>
+                        @if (Model.Designation == "Mr")
+                        {
+                            <option selected value="Mr">Mr</option>
+                        }
+                        else
+                        {
+                            <option value="Mr">Mr</option>
+                        }
+                        @if (Model.Designation == "Ms")
+                        {
+                            <option selected value="Ms">Ms</option>
+                        }
+                        else
+                        {
+                            <option value="Ms">Ms</option>
+                        }
+                        @if (Model.Designation == "Mrs")
+                        {
+                            <option selected value="Mrs">Mrs</option>
+                        }
+                        else
+                        {
+                            <option value="Mrs">Mrs</option>
+                        }
+                        @if (Model.Designation == "Baby")
+                        {
+                            <option selected value="Baby">Baby</option>
+                        }
+                        else
+                        {
+                            <option value="Baby">Baby</option>
+                        }
+                        @if (Model.Designation == "Rev")
+                        {
+                            <option selected value="Rev">Rev</option>
+                        }
+                        else
+                        {
+                            <option value="Rev">Rev</option>
+                        }
+                        @if (Model.Designation == "Master")
+                        {
+                            <option selected value="Master">Master</option>
+                        }
+                        else
+                        {
+                            <option value="Master">Master</option>
+                        }
+                        @if (Model.Designation == "Dr")
+                        {
+                            <option selected value="Dr">Dr</option>
+                        }
+                        else
+                        {
+                            <option value="Dr">Dr</option>
+                        }
+                        @if (Model.Designation == "Prof")
+                        {
+                            <option selected value="Prof">Prof</option>
+                        }
+                        else
+                        {
+                            <option value="Prof">Prof</option>
+                        }
+
+
+                    </select>
+                </div>
+            </div>
+            <!-- Row 3: Name and Surname -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Name)*</label>
+                    <input class="form-control" name="Name" id="Name" value=@Model.Name />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Surname)</label>
+                    <input class="form-control" name="Surname" id="Surname" value=@Model.Surname />
+                </div>
+            </div>
+            <!-- Row 4: DOB and Gender -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.DOB)*</label>
+                    <input class="form-control" name="DOB" id="DOB" value=@Model.DOB />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Gender)*</label>
+                    <select id="Gender" name="Gender" class="form-control">
+                        <option value="">Select Option</option>
+                        @if (Model.Gender == "Male")
+                        {
+                            <option selected value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        }
+                        else
+                        {
+                            <option value="Male">Male</option>
+                            <option selected value="Female">Female</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <!-- Row 5: Resident Area and Nationality -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.ResidentArea)</label>
+                    <input class="form-control" name="ResidentArea" id="ResidentArea" value=@Model.ResidentArea />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Nationality)</label>
+                    <input class="form-control" name="Nationality" id="Nationality" value=@Model.Nationality />
+                </div>
+            </div>
+            <!-- Row 6: Religion and Relationship with Guardian -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Religion)*</label>
+                    <select id="AddPatientReligion" name="Religion" class="form-control" dropzone="true">
+                        <option value="">Select Option</option>
+                        @if (Model.Religion == "Buddhist")
+                        {
+                            <option selected value="Buddhist">Buddhist</option>
+                            <option value="Catholic">Catholic</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Other">Other</option>
+                        }
+                        else if (Model.Religion == "Catholic")
+                        {
+                            <option value="Buddhist">Buddhist</option>
+                            <option selected value="Catholic">Catholic</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Other">Other</option>
+                        }
+                        else if (Model.Religion == "Islam")
+                        {
+                            <option value="Buddhist">Buddhist</option>
+                            <option value="Catholic">Catholic</option>
+                            <option selected value="Islam">Islam</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Other">Other</option>
+                        }
+                        else if (Model.Religion == "Hindu")
+                        {
+                            <option value="Buddhist">Buddhist</option>
+                            <option value="Catholic">Catholic</option>
+                            <option value="Islam">Islam</option>
+                            <option selected value="Hindu">Hindu</option>
+                            <option value="Other">Other</option>
+                        }
+                        else if (Model.Religion == "Other")
+                        {
+                            <option value="Buddhist">Buddhist</option>
+                            <option value="Catholic">Catholic</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Hindu">Hindu</option>
+                            <option selected value="Other">Other</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.RelationGuardian)*</label>
+                    <select id="AddPatientRelationGuardian" name="RelationGuardian" class="form-control" dropzone="true">
+                        <option value="">Select Option</option>
+                        @if (Model.RelationGuardian == "Self")
+                        {
+                            <option selected value="Self">Self</option>
+                        }
+                        else
+                        {
+                            <option value="Self">Self</option>
+                        }
+
+                        @if (Model.RelationGuardian == "Mother")
+                        {
+                            <option selected value="Mother">Mother</option>
+                        }
+                        else
+                        {
+                            <option value="Mother">Mother</option>
+                        }
+
+                        @if (Model.RelationGuardian == "Father")
+                        {
+                            <option selected value="Father">Father</option>
+                        }
+                        else
+                        {
+                            <option value="Father">Father</option>
+                        }
+
+                        @if (Model.RelationGuardian == "Son")
+                        {
+                            <option selected value="Son">Son</option>
+                        }
+                        else
+                        {
+                            <option value="Son">Son</option>
+                        }
+
+                        @if (Model.RelationGuardian == "Daughter")
+                        {
+                            <option selected value="Daughter">Daughter</option>
+                        }
+                        else
+                        {
+                            <option value="Daughter">Daughter</option>
+                        }
+
+                        @if (Model.RelationGuardian == "Next Of Kin")
+                        {
+                            <option selected value="Next Of Kin">Next Of Kin</option>
+                        }
+                        else
+                        {
+                            <option value="Next or Kind">Next Of Kin</option>
+                        }
+
+                        @if (Model.RelationGuardian == "Friend")
+                        {
+                            <option selected value="Friend">Friend</option>
+                        }
+                        else
+                        {
+                            <option value="Friend">Friend</option>
+                        }
+
+                        @if (Model.RelationGuardian == "Other")
+                        {
+                            <option selected value="Other">Other</option>
+                        }
+                        else
+                        {
+                            <option value="Other">Other</option>
+                        }
+
+                    </select>
+                </div>
+            </div>
+            <!-- Row 7: Guardian Name and Guardian ID -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.GuardianName)*</label>
+                    <input class="form-control" name="GuardianName" id="GuardianName" value=@Model.GuardianName />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.GuardianID)*</label>
+                    <input class="form-control" name="GuardianID" id="GuardianID" value=@Model.GuardianID />
+                </div>
+            </div>
+            <!-- Row 8: Loyalty No and Member ID -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.LoyaltyNo)</label>
+                    <input class="form-control" name="LoyaltyNo" id="LoyaltyNo" value=@Model.LoyaltyNo />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.MemberID)</label>
+                    <input class="form-control" name="MemberID" id="MemberID" value=@Model.MemberID />
+                </div>
+            </div>
+            <!-- Row 9: Email and Special Conditions -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="control-label marginlr-10 fw-bold">@Html.DisplayNameFor(model => model.Email)</label>
+                    <input class="form-control" name="Email" id="Email" value=@Model.Email />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.SpecialConditions)</label>
+                    <select id="AddPatientSpecialConditions" name="SpecialConditions" class="form-control" dropzone="true">
+                        <option value="">Select Option</option>
+
+                        @if (Model.SpecialConditions == "Disable")
+                        {
+                            <option selected value="Disable">Disable</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Staff">Staff</option>
+                            <option value="Consultant">Consultant</option>
+                        }
+                        else if (Model.SpecialConditions == "VIP")
+                        {
+                            <option value="Disable">Disable</option>
+                            <option selected value="VIP">VIP</option>
+                            <option value="Staff">Staff</option>
+                            <option value="Consultant">Consultant</option>
+                        }
+                        else if (Model.SpecialConditions == "Staff")
+                        {
+                            <option value="Disable">Disable</option>
+                            <option value="VIP">VIP</option>
+                            <option selected value="Staff">Staff</option>
+                            <option value="Consultant">Consultant</option>
+                        }
+                        else if (Model.SpecialConditions == "Consultant")
+                        {
+                            <option value="Disable">Disable</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Staff">Staff</option>
+                            <option selected value="Consultant">Consultant</option>
+                        }
+
+                    </select>
+                </div>
+            </div>
+            <!-- Row 10: Social Id and loyalprogramid -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.SocialId)</label>
+                    <input class="form-control" name="SocialId" id="SocialId" value=@Model.SocialId />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.LoyaltyProgramId)</label>
+                    <select id="AddPatientLoyaltyProgramId" name="LoyaltyProgramId" class="form-control" dropzone="true">
+                        <option value="">Select Option</option>
+
+                        @if (Model.LoyaltyProgramId == "1")
+                        {
+                            <option selected value="1">Nawaloka Family Care</option>
+                            <option value="2">MIRA Cosmetic</option>
+                            <option value="3">Wellness Center</option>
+                        }
+                        else if (Model.LoyaltyProgramId == "2")
+                        {
+                            <option value="1">Nawaloka Family Care</option>
+                            <option selected value="2">MIRA Cosmetic</option>
+                            <option value="3">Wellness Center</option>
+                        }
+                        else
+                        {
+                            <option value="1">Nawaloka Family Care</option>
+                            <option value="2">MIRA Cosmetic</option>
+                            <option value="3">Wellness Center</option>
+                        }
+
+
+                    </select>
+                </div>
+            </div>
+            <!-- Row 11:  Active -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Active)</label>
+                    <select name="Active" id="Active" class="form-control" dropzone="true">
+                        @if (Model.Active == true)
+                        {
+                            <option selected value="True">True</option>
+                            <option value="False">False</option>
+                        }
+                        else
+                        {
+                            <option value="True">True</option>
+                            <option selected value="False">False</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                </div>
+            </div>
+            <!-- Submission Button -->
+            <div class="form-group mt-4">
+                <input type="submit" value="Update" class="btn btn-success siteButtons" />
+            </div>
+        </form>
+    </div>
+    <a class="btn btn-warning mb-4 mt-4 loyaltyEditback btnbacktoList" asp-action="InactivePatients">Back to List</a>
+</div>

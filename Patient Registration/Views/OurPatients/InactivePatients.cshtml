@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Patient_Registration.Models.Call_Patients>
+
+@{
+    ViewData["Title"] = "List Inactive Patient";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+<div class="row1 loyaltyEditback inactivepatients">
+    <h2>Inactive Patients</h2>
+    <hr />
+    <div class="border border-warning1 p-0 horizontalscroll">
+        <table class="table tblList">
+            <thead>
+                <tr class="tableTopBackColor tblHeadingCenter">
+                    <th>Mobile No</th>
+                    <th>NIC</th>                   
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Guardian Name</th>
+                    <th>Relationship</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    if (item.LoyaltyProgramId == null)
+                    {
+                        <tr class="tblListPatientsRows">
+                            <td>@Html.DisplayFor(modelItem => item.MobileNo)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NIC)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Name) &nbsp;@Html.DisplayFor(modelItem => item.Surname)</td>
+                            <td class="tblColumnCenter">@Html.DisplayFor(modelItem => item.Gender)</td>
+                            <td>@Html.DisplayFor(modelItem => item.GuardianName)</td>
+                            <td class="tblColumnCenter">@Html.DisplayFor(modelItem => item.RelationGuardian)</td>
+                            <td class="showinsameline">
+                                <a asp-action="InactiveEdit" asp-route-id="@item.Id" class="btn btn-info listDetailsbtn patientListActionBtn">Edit</a>
+                                <a asp-action="InactiveDetails" asp-route-id="@item.Id" class="btn btn-success patientListActionBtn">Details</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr class="listPatientLoyaltyDisplay tblListPatientsRows">
+                            <td>@Html.DisplayFor(modelItem => item.MobileNo)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NIC)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Name) &nbsp;@Html.DisplayFor(modelItem => item.Surname)</td>
+                            <td class="tblColumnCenter">@Html.DisplayFor(modelItem => item.Gender)</td>
+                            <td>@Html.DisplayFor(modelItem => item.GuardianName)</td>
+                            <td class="tblColumnCenter">@Html.DisplayFor(modelItem => item.RelationGuardian)</td>
+                            <td class="showinsameline">
+                                <a asp-action="InactiveEdit" asp-route-id="@item.Id" class="btn btn-info listDetailsbtn patientListActionBtn">Edit</a>
+                                <a asp-action="InactiveDetails" asp-route-id="@item.Id" class="btn btn-success patientListActionBtn">Details</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                    }
+                    
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

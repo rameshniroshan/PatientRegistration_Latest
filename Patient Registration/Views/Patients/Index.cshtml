@@ -1,0 +1,173 @@
+﻿@model IEnumerable<Patient_Registration.Models.Call_Patients>
+
+@{
+    ViewData["Title"] = "List Patient";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+<div class="row listpatientpaddingtop">
+    <h2>Search Patients</h2>
+    <hr />
+    <div class="col-md-6">
+        <div class="border border-warning p-3">
+
+            @* <form method="get" asp-controller="Patients" asp-action="Index" >
+            <div class="form-group toplogoandgreentext">
+            <input name="searchString" class="form-control" type="search" placeholder="Search" aria-label="Search" />
+            </div>
+
+            <div class="form-group">
+            <input type="submit" value="Search" class="btn btn-success" />
+            </div>
+            </form> *@
+            <form method="get" asp-action="Index" asp-controller="Patients">
+                <div class="toplogoandgreentext">
+                    <input type="text" name="searchterm" class="form-control mr-1" style="margin-right:10px" placeholder="Search" />
+                    <input type="submit" value="search" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row col-sm-2 mt-4" style="margin:1px">
+
+    @Html.ActionLink("Create New Patient", "Create", "Patients", new { area = "" }, new { @class = "nav-link btn btn-light" })
+</div>
+<div class="row listpatientpaddingtop">
+    <h2>List Patients</h2>
+    <hr />
+    <div class="border border-warning1 pl-3 horizontalscroll">
+<table class="table">
+    <thead>
+        <tr class="bg-secondary opacity-50">
+            <th>
+                @Html.DisplayNameFor(model => model.NIC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PassportNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Designation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResidentArea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Religion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GuardianID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GuardianName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RelationGuardian)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoyaltyNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecialConditions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SocialId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NIC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassportNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResidentArea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nationality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Religion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GuardianID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GuardianName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RelationGuardian)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoyaltyNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MemberID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialConditions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SocialId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyId)
+            </td>
+            <td class="showinsameline">
+                    <a asp-action="Edit" asp-route-id="@item.MobileNo" class="btn btn-info">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MobileNo" class="btn btn-success">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MobileNo" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</div>

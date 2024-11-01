@@ -1,0 +1,439 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\PROJECTS\\Patient Registration\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\services\\ldapauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\services\\ldapauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\shared\\_layoutlogged.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\shared\\_layoutlogged.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\controllers\\loyaltyprogramscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\controllers\\loyaltyprogramscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\users\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\users\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\models\\ldapsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\models\\ldapsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\controllers\\ourpatientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\controllers\\ourpatientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\users\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\users\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\loyaltyprograms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\loyaltyprograms\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\loyaltyprograms\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\loyaltyprograms\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\loyaltyprograms\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\loyaltyprograms\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\loyaltyprograms\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\loyaltyprograms\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\inactiveedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\inactiveedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\inactivedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\inactivedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\shared\\_layoutlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\shared\\_layoutlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|c:\\projects\\patient registration\\patient registration\\views\\ourpatients\\inactivepatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E559EAC-524E-4EA0-B628-9EF61C89C57B}|Patient Registration\\Patient Registration.csproj|solutionrelative:patient registration\\views\\ourpatients\\inactivepatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "InactiveEdit.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\InactiveEdit.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\InactiveEdit.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\InactiveEdit.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\InactiveEdit.cshtml",
+              "ViewState": "AgIAAHoBAAAAAAAAAIBJwJABAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T06:39:38.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Program.cs",
+              "RelativeDocumentMoniker": "Patient Registration\\Program.cs",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Program.cs",
+              "RelativeToolTip": "Patient Registration\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T04:47:34.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoyaltyProgramsController.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Controllers\\LoyaltyProgramsController.cs",
+              "RelativeDocumentMoniker": "Patient Registration\\Controllers\\LoyaltyProgramsController.cs",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Controllers\\LoyaltyProgramsController.cs",
+              "RelativeToolTip": "Patient Registration\\Controllers\\LoyaltyProgramsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T05:22:17.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Patient Registration\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Patient Registration\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAYwGUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T04:25:51.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\appsettings.json",
+              "RelativeDocumentMoniker": "Patient Registration\\appsettings.json",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\appsettings.json",
+              "RelativeToolTip": "Patient Registration\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-31T03:49:58.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Users\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\Users\\ChangePassword.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Users\\ChangePassword.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\Users\\ChangePassword.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T07:27:44.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Patient Registration\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Patient Registration\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAqwAgBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-28T05:50:34.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LdapSettings.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Models\\LdapSettings.cs",
+              "RelativeDocumentMoniker": "Patient Registration\\Models\\LdapSettings.cs",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Models\\LdapSettings.cs",
+              "RelativeToolTip": "Patient Registration\\Models\\LdapSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:44:11.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LdapAuthenticationService.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Services\\LdapAuthenticationService.cs",
+              "RelativeDocumentMoniker": "Patient Registration\\Services\\LdapAuthenticationService.cs",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Services\\LdapAuthenticationService.cs",
+              "RelativeToolTip": "Patient Registration\\Services\\LdapAuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:48:25.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_LayoutLogged.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Shared\\_LayoutLogged.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\Shared\\_LayoutLogged.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Shared\\_LayoutLogged.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\Shared\\_LayoutLogged.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAJwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T05:13:54.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Signin.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Users\\Signin.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\Users\\Signin.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Users\\Signin.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\Users\\Signin.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAIBJwGMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T05:14:33.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\LoyaltyPrograms\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\LoyaltyPrograms\\Edit.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\LoyaltyPrograms\\Edit.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\LoyaltyPrograms\\Edit.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAIBJwDkAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-29T10:20:07.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\LoyaltyPrograms\\Details.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\LoyaltyPrograms\\Details.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\LoyaltyPrograms\\Details.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\LoyaltyPrograms\\Details.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAIBJwCsAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T05:05:36.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OurPatientsController.cs",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Controllers\\OurPatientsController.cs",
+              "RelativeDocumentMoniker": "Patient Registration\\Controllers\\OurPatientsController.cs",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Controllers\\OurPatientsController.cs",
+              "RelativeToolTip": "Patient Registration\\Controllers\\OurPatientsController.cs",
+              "ViewState": "AgIAAAwBAAAAAAAAAAAnwCYBAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T03:51:39.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\Edit.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Edit.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\Edit.cshtml",
+              "ViewState": "AgIAAHgBAAAAAAAAAAAgwJoBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T06:39:51.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\LoyaltyPrograms\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\LoyaltyPrograms\\Delete.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\LoyaltyPrograms\\Delete.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\LoyaltyPrograms\\Delete.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBJwCMAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T05:05:51.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\LoyaltyPrograms\\Create.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\LoyaltyPrograms\\Create.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\LoyaltyPrograms\\Create.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\LoyaltyPrograms\\Create.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBYAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T07:14:12.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Search.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\Search.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Search.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\Search.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T09:26:40.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\Delete.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Delete.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\Delete.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAIBJwIMAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T04:37:05.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "InactivePatients.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\InactivePatients.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\InactivePatients.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\InactivePatients.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\InactivePatients.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T06:15:08.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "InactiveDetails.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\InactiveDetails.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\InactiveDetails.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\InactiveDetails.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\InactiveDetails.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAIBJwDoAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T06:19:41.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Details.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\Details.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Details.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\Details.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAswEgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T06:18:15.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\List.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\List.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\List.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\List.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAIBZwDUAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T05:18:14.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_LayoutLogin.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Shared\\_LayoutLogin.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\Shared\\_LayoutLogin.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Shared\\_LayoutLogin.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\Shared\\_LayoutLogin.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBZwBwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T05:15:21.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAIBZwFUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T05:12:42.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Create.cshtml",
+              "RelativeDocumentMoniker": "Patient Registration\\Views\\OurPatients\\Create.cshtml",
+              "ToolTip": "C:\\PROJECTS\\Patient Registration\\Patient Registration\\Views\\OurPatients\\Create.cshtml",
+              "RelativeToolTip": "Patient Registration\\Views\\OurPatients\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-28T03:05:45.495Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

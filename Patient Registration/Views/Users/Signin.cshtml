@@ -1,0 +1,107 @@
+﻿@model Patient_Registration.Models.Call_Users
+
+@{
+    ViewData["Title"] = "Loging";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@* <div class="row ">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h2>Users Login</h2>
+        <div class=" border border-warning p-3">
+            <form asp-action="Signin">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group toplogoandgreentext">
+                    <label asp-for="UserName" class="control-label"></label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group toplogoandgreentext">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-success" />
+                    <input class="btn btn-warning btnClear" type="button" value="Clear" />
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div> *@
+
+@* <div id="loader" class="d-none"></div> *@
+<div id="fldataloader" style="display: none;" class="checkoutloader offset-md-4">
+    <span>
+        <img alt="" src="~/images/Loader.gif" />
+    </span>   
+</div>
+<div class="col-md-4 offset-md-4 userloginsection">
+    <h2 class="text-center mb-4">Medicare Login</h2>
+    <div class="border border-warning p-4 rounded shadow-sm">
+        <div class="errorLabel" id="divError"></div>
+        <form asp-action="Signin">
+            <div class="form-group">
+                <label class="control-label">User Name:</label>
+                <input asp-for="UserName" class="form-control mb-3" placeholder="User Name" />
+            </div>
+           
+            <div class="form-group">
+                <label class="control-label">Password:</label>                
+                <input asp-for="Password" class="form-control mb-4" placeholder="Password" />
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-success siteButtons" id="btnLogin" name="btnLogin" />
+                <input class="btn btn-warning btnClear siteButtonsclear"id="btnClear" type="button" value="Clear" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@* @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} *@
+@section scripts {
+<script>
+     $(document).ready(function (e) {
+
+        $("#btnLogin").click(function () {                
+           return ValidationControls();
+        });
+
+        $("#btnClear").click(function () {
+            $("#UserName").val("");
+            $("#Password").val("");
+        });
+
+        function ValidationControls() {
+            var status = true;
+                
+            var message = "Please Enter User Name and Password.";           
+            if ($("#UserName").val() == "") {
+                message = "Please Enter User Name.";
+                status = false;
+            }
+            else if ($("#Password").val() == "") {
+                message = "Please Enter Password.";
+                status = false;
+            }
+            if (status == false) {
+                $("#divError").html(message);
+                $("#divError").addClass("alert alert-danger");
+                    $("#fldataloader").fadeOut();
+            }else{
+                    $("#fldataloader").fadeIn();
+            }
+           
+            return status;
+        }
+     });
+</script>
+}

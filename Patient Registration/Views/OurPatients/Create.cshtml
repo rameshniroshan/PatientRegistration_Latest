@@ -1,0 +1,926 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.AspNetCore.Mvc.RazorPages;
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@model IEnumerable<Patient_Registration.Models.Call_Patients>
+
+@{
+    ViewData["Title"] = "List and Create Patient";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+@await Html.PartialAsync("List", Model)
+
+<div class="container listpatientpaddingtop">
+    <h2 id="createPatientHeading">Create Patients</h2>
+    <hr>
+    <div class="border border-warning p-4 rounded-3">
+        <!-- Error Label -->
+        @{
+            var sessionValue = HttpContextAccessor.HttpContext.Session.GetString("patientCreated");
+            if (sessionValue == "true")
+            {
+                    <div class="alert alert-success" id="divError">Patient SuccessFully Added</div>
+                HttpContextAccessor.HttpContext.Session.SetString("patientCreated","");
+            }else{
+                            <div class="errorLabel" id="divError"></div>
+            }
+        
+        }
+               
+        <form  asp-action="Create" id="frmCreatePatient">
+            <!-- Row 1: Mobile No and NIC -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientMobileNo" class="form-label fw-bold">@Html.DisplayNameFor(model => model.MobileNo)*</label>
+                    <input type="text" class="form-control" name="MobileNo" id="AddPatientMobileNo" placeholder="Mobile No" maxlength=13>
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientNIC" class="form-label fw-bold">@Html.DisplayNameFor(model => model.NIC)</label>
+                    <input type="text" class="form-control" name="NIC" id="AddPatientNIC" placeholder="NIC">
+                </div>
+            </div>
+            <!-- Row 2: Passport No and Designation -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientPassportNo" class="form-label fw-bold">@Html.DisplayNameFor(model => model.PassportNo)</label>
+                    <input type="text" class="form-control" name="PassportNo" id="AddPatientPassportNo" placeholder="Passport No">
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientDesignation" class="form-label fw-bold">@Html.DisplayNameFor(model => model.Designation)*</label>
+                    <select class="form-control" name="Designation" id="AddPatientDesignation">
+                        <option value="">Select Option</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Baby">Baby</option>
+                        <option value="Rev">Rev</option>
+                        <option value="Master">Master</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Prof">Prof</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Row 3: Name and Surname -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Name)*</label>
+                    <input class="form-control" name="Name" id="AddPatientName" placeholder="Name" />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Surname)</label>
+                    <input class="form-control" name="Surname" id="AddPatientSurname" placeholder="Surname" />
+                </div>
+            </div>
+            <!-- Row 4: DOB and Gender -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.DOB)*</label>
+                    <input class="form-control" name="DOB" id="AddPatientDOB" placeholder="Date Of Birth" />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Gender)*</label>
+                    <select id="AddPatientGender" name="Gender" class="form-control">
+                        <option value="">Select Option</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Row 5: Resident Area and Nationality -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.ResidentArea)</label>
+                    <input class="form-control" name="ResidentArea" id="AddPatientResidentArea" placeholder="Resident Area" />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Nationality)</label>
+                    <input class="form-control" name="Nationality" id="AddPatientNationality" placeholder="Nationality" />
+                </div>
+            </div>
+            <!-- Row 6: Religion and Relationship with Guardian -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Religion)*</label>
+                    <select id="AddPatientReligion" name="Religion" class="form-control" dropzone="true">
+                        <option value="">Select Option</option>
+                        <option value="Buddhist">Buddhist</option>
+                        <option value="Catholic">Catholic</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.RelationGuardian)*</label>
+                    <select id="AddPatientRelationGuardian" name="RelationGuardian" class="form-control" dropzone="true" onchange="RelatedGurdianOnChange()">
+                        <option value="">Select Option</option>
+                        <option value="Self">Self</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Father">Father</option>
+                        <option value="Son">Son</option>
+                        <option value="Daughter">Daughter</option>
+                        <option value="Next or Kind">Next Of Kin</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Row 7: Guardian Name and Guardian ID -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.GuardianName)*</label>
+                    <input class="form-control" name="GuardianName" id="AddPatientGuardianName" placeholder="Guardian Name" />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.GuardianID)*</label>
+                    <input class="form-control" name="GuardianID" id="AddPatientGuardianID" placeholder="Guardian ID" />
+                </div>
+            </div>
+            <!-- Row 8: Loyalty No and Member ID -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.LoyaltyNo)</label>
+                    <input class="form-control" name="LoyaltyNo" id="AddPatientLoyaltyNo" placeholder="Loyalty No" />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.MemberID)</label>
+                    <input class="form-control" name="MemberID" id="AddPatientMemberID" placeholder="Member ID" />
+                </div>
+            </div>
+            <!-- Row 9: Email and Special Conditions -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Email)</label>
+                    <input class="form-control" name="Email" id="AddPatientEmail" placeholder="Email" />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.SpecialConditions)</label>
+                    <select id="AddPatientSpecialConditions" name="SpecialConditions" class="form-control" dropzone="true">
+                        <option value="">Select Option</option>
+                        <option value="Disable">Disable</option>
+                        <option value="VIP">VIP</option>
+                        <option value="Staff">Staff</option>
+                        <option value="Consultant">Consultant</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Row 10: Social Id and LoyaltyProgramId -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.SocialId)</label>
+                    <input class="form-control" name="SocialId" id="AddPatientSocialId" placeholder="Social Id" />
+                </div>
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.LoyaltyProgramId)</label>
+                   
+                    <select name="LoyaltyProgramId" id="AddPatientLoyaltyProgramme" class="form-control" dropzone="true">
+                        <option value="">Select option</option>
+                        @section loadLoyaltyscripts {
+                        <script type="text/javascript">
+                                    //load all Loyalty Programme
+                                    var oLoyaltyProgramme = "";
+                                    
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/OurPatients/GetAllLoyaltyProgramme",
+                                        contentType: "application/json; charset=utf-8",
+                                        data: "{}",
+                                        dataType: "json",
+                                        async: true,
+                                        cache: false,
+                                        success: function (data) {                                    
+                                            oLoyaltyProgramme = data.loyaltyProgramme;
+
+                                        oLoyaltyProgramme.forEach(function (item) {
+                                            //alert(item.LoyaltyName);
+                                            var selectBox = $("#AddPatientLoyaltyProgramme");
+                                            var option = "<option value='" + item.Id + "'>" + item.LoyaltyName + "</option>";
+                                            selectBox.append(option);
+                                        });
+                                        },
+                                        failure: function (msg) {
+                                            alert(msg.d);
+                                        },
+                                        error: function (error, errortype, exceptionobject) {
+                                            var err = eval("(" + error.responseText + ")");
+                                            alert(err.Message);
+                                        }
+                                    });
+                        </script>
+                        }
+                        
+                    </select>
+                </div>
+            </div>
+            <!-- Row 10: Active -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label class="form-label fw-bold">@Html.DisplayNameFor(model => model.Active)</label>
+                    <select name="Active" id="AddPatientActive" class="form-control" dropzone="true">
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    
+                </div>
+            </div>
+
+            <!-- Submission Button -->
+            <div class="form-group mt-4">
+                <input type="submit" value="Create" id="btnSubmitPatient" class="btn btn-success siteButtons" />
+                <input class="btn btn-warning btnClear listDetailsbtn siteButtonsclear" id="btnCreatePatientClear" type="button" value="Clear" />
+            </div>
+
+        </form>
+        </div>
+        <div style="margin-top:15px;margin-bottom:15px">&nbsp;</div>
+        </div>
+
+@* <div class="row listpatientpaddingtop">
+    <h2>Create Patients</h2>
+    <hr />
+    <div class="col-md-12">
+        <div class="border border-warning p-3 rounded-3">
+            <div class="errorLabel" id="divError"></div>
+            <div>
+                <form  asp-action="Create" id="frmCreatePatient">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>                 
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10"> @Html.DisplayNameFor(model => model.MobileNo)*</label>
+                            <input class="form-control" name="MobileNo" id="AddPatientMobileNo" />
+                            
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.NIC)</label>
+                            <input class="form-control" name="NIC" id="AddPatientNIC" />
+                        </div>
+                    </div>
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.PassportNo)</label>
+                            <input class="form-control" name="PassportNo" id="AddPatientPassportNo" />
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.Designation)*</label>                         
+                            <select name="Designation" id="AddPatientDesignation" class="form-control" dropzone="true">
+                                <option value="">Select Option</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Baby">Baby</option>
+                                <option value="Rev">Rev</option>
+                                <option value="Master">Master</option>
+                                <option value="Dr">Dr</option>
+                                <option value="Prof">Prof</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.Name)*</label>
+                            <input class="form-control" name="Name" id="AddPatientName" />
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.Surname)</label>
+                            <input class="form-control" name="Surname" id="AddPatientSurname" />
+                        </div>
+                    </div>
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.DOB)*</label>
+                            <input class="form-control" name="DOB" id="AddPatientDOB" />
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.Gender)*</label>
+                            <select id="AddPatientGender" name="Gender" class="form-control">
+                                <option value="">Select Option</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.ResidentArea)</label>
+                            <input class="form-control" name="ResidentArea" id="AddPatientResidentArea" />
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.Nationality)</label>
+                            <input class="form-control" name="Nationality" id="AddPatientNationality" />
+                        </div>
+                    </div>
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.Religion)*</label>
+                            <select id="AddPatientReligion" name="Religion" class="form-control" dropzone="true">
+                                <option value="">Select Option</option>
+                                <option value="Buddhist">Buddhist</option>
+                                <option value="Catholic">Catholic</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                           
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.RelationGuardian)*</label>
+                            <select id="AddPatientRelationGuardian" name="RelationGuardian" class="form-control" dropzone="true" onchange="RelatedGurdianOnChange()">
+                                <option value="">Select Option</option>
+                                <option value="Self">Self</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Father">Father</option>
+                                <option value="Son">Son</option>
+                                <option value="Daughter">Daughter</option>
+                                <option value="Next or Kind">Next Of Kin</option>
+                                <option value="Friend">Friend</option>
+                                <option value="Other">Other</option>
+                            </select>
+                           
+                        </div>
+                    </div>
+                   
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">                            
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.GuardianName)*</label>
+                            <input class="form-control" name="GuardianName" id="AddPatientGuardianName" />
+                        </div>
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.GuardianID)*</label>
+                            <input class="form-control" name="GuardianID" id="AddPatientGuardianID" />
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.LoyaltyNo)</label>
+                            <input class="form-control" name="LoyaltyNo" id="AddPatientLoyaltyNo" />
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.MemberID)</label>
+                            <input class="form-control" name="MemberID" id="AddPatientMemberID" />
+                        </div>
+                    </div>
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.Email)</label>
+                            <input class="form-control" name="Email" id="AddPatientEmail" />
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.SpecialConditions)</label>
+                            <select id="AddPatientSpecialConditions" name="SpecialConditions" class="form-control" dropzone="true">
+                                <option value="">Select Option</option>
+                                <option value="Disable">Disable</option>
+                                <option value="VIP">VIP</option>
+                                <option value="Staff">Staff</option>
+                                <option value="Consultant">Consultant</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.SocialId)</label>
+                            <input class="form-control" name="SocialId" id="AddPatientSocialId" />
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <label class="control-label marginlr-10">@Html.DisplayNameFor(model => model.Active)</label>                           
+                            <select name="Active" id="AddPatientActive" class="form-control" dropzone="true">
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row showinsameline">
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                           
+                        </div>
+
+                        <div class="col-sm-5 form-group toplogoandgreentext">
+                            <span class="text-danger lblerr">* mandatory values</span>
+                        </div>
+                    </div>
+                    <div class="form-group mt-4">
+                        <div class="marginlr-10">
+                            <input type="submit" value="Create" id="btnSubmitPatient" class="btn btn-success" />
+                            <input class="btn btn-warning btnClear" type="button" value="Clear" />
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+
+@* <div class="container listpatientpaddingtop">
+    <h2>Create Patients</h2>
+    <hr>
+    <div class="border border-warning p-4 rounded-3">
+        <!-- Error Label -->
+        <div class="errorLabel" id="divError"></div>
+
+        <!-- Form Starts -->
+        <form id="frmCreatePatient" action="/OurPatients/Create" method="post">
+
+            <!-- Row 1: Mobile No and NIC -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientMobileNo" class="form-label">Mobile No: *</label>
+                    <input type="text" class="form-control" name="MobileNo" id="AddPatientMobileNo" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientNIC" class="form-label">NIC:</label>
+                    <input type="text" class="form-control" name="NIC" id="AddPatientNIC">
+                </div>
+            </div>
+
+            <!-- Row 2: Passport No and Designation -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientPassportNo" class="form-label">Passport No:</label>
+                    <input type="text" class="form-control" name="PassportNo" id="AddPatientPassportNo">
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientDesignation" class="form-label">Designation: *</label>
+                    <select class="form-select" name="Designation" id="AddPatientDesignation" required>
+                        <option value="">Select Option</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Baby">Baby</option>
+                        <option value="Rev">Rev</option>
+                        <option value="Master">Master</option>
+                        <option value="Dr">Dr</option>
+                        <option value="Prof">Prof</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Row 3: Name and Surname -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientName" class="form-label">Name: *</label>
+                    <input type="text" class="form-control" name="Name" id="AddPatientName" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientSurname" class="form-label">Surname:</label>
+                    <input type="text" class="form-control" name="Surname" id="AddPatientSurname">
+                </div>
+            </div>
+
+            <!-- Row 4: DOB and Gender -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientDOB" class="form-label">Date of Birth: *</label>
+                    <input type="date" class="form-control" name="DOB" id="AddPatientDOB" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientGender" class="form-label">Gender: *</label>
+                    <select class="form-select" name="Gender" id="AddPatientGender" required>
+                        <option value="">Select Option</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Row 5: Resident Area and Nationality -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientResidentArea" class="form-label">Resident Area:</label>
+                    <input type="text" class="form-control" name="ResidentArea" id="AddPatientResidentArea">
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientNationality" class="form-label">Nationality:</label>
+                    <input type="text" class="form-control" name="Nationality" id="AddPatientNationality">
+                </div>
+            </div>
+
+            <!-- Row 6: Religion and Relationship with Guardian -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientReligion" class="form-label">Religion: *</label>
+                    <select class="form-select" name="Religion" id="AddPatientReligion" required>
+                        <option value="">Select Option</option>
+                        <option value="Buddhist">Buddhist</option>
+                        <option value="Catholic">Catholic</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientRelationGuardian" class="form-label">Relationship with Guardian *</label>
+                    <select class="form-select" name="RelationGuardian" id="AddPatientRelationGuardian" required>
+                        <option value="">Select Option</option>
+                        <option value="Self">Self</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Father">Father</option>
+                        <option value="Son">Son</option>
+                        <option value="Daughter">Daughter</option>
+                        <option value="Next of Kin">Next of Kin</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Row 7: Guardian Name and Guardian ID -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <label for="AddPatientGuardianName" class="form-label">Guardian Name: *</label>
+                    <input type="text" class="form-control" name="GuardianName" id="AddPatientGuardianName" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="AddPatientGuardianID" class="form-label">Guardian ID: *</label>
+                    <input type="text" class="form-control" name="GuardianID" id="AddPatientGuardianID" required>
+                </div>
+            </div>
+
+            <!-- Additional Fields (Loyalty No, Email, Social ID, etc.) -->
+            <!-- Add rows similarly for other fields, following the structure above. -->
+            <!-- Submission Button -->
+            <div class="form-group mt-4">
+                <button type="submit" class="btn btn-success">Create</button>
+                <button type="button" class="btn btn-warning">Clear</button>
+            </div>
+        </form>
+        <!-- End of Form -->
+    </div>
+</div> *@
+
+@section scripts {
+<script type="text/javascript">
+        //load all patients mobile
+        var oMobileNumbers = "";
+        var oNameList = "";
+        var oGuardianNames = "";
+        $.ajax({
+            type: "POST",
+            url: "/OurPatients/GetAllPatientsMobile",
+            contentType: "application/json; charset=utf-8",
+            data: "{}",
+            dataType: "json",
+            async: true,
+            cache: false,
+            success: function (data) {
+                oMobileNumbers = data.mobileList;
+            },
+            failure: function (msg) {
+                alert(msg.d);
+            },
+            error: function (error, errortype, exceptionobject) {
+                var err = eval("(" + error.responseText + ")");
+                alert(err.Message);
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: "/OurPatients/GetAllPatientsName",
+            contentType: "application/json; charset=utf-8",
+            data: "{}",
+            dataType: "json",
+            async: true,
+            cache: false,
+            success: function (data) {
+                oNameList = data.nameList;
+            },
+            failure: function (msg) {
+                alert(msg.d);
+            },
+            error: function (error, errortype, exceptionobject) {
+                var err = eval("(" + error.responseText + ")");
+                alert(err.Message);
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: "/OurPatients/GetAllPatientsGuardians",
+            contentType: "application/json; charset=utf-8",
+            data: "{}",
+            dataType: "json",
+            async: true,
+            cache: false,
+            success: function (data) {
+                oGuardianNames = data.guardiansname;
+            },
+            failure: function (msg) {
+                alert(msg.d);
+            },
+            error: function (error, errortype, exceptionobject) {
+                var err = eval("(" + error.responseText + ")");
+                alert(err.Message);
+            }
+        });
+
+    function RelatedGurdianOnChange() {
+            var RelationType = $("#AddPatientRelationGuardian").val();
+       // alert(RelationType);
+        if (RelationType == "Self") {
+            $.ajax({
+                url: '/OurPatients/GetGurdianNextId', // Controller action
+                type: 'GET', // Type of request, can be POST
+                dataType: 'json', // Expected response type
+                data: { relationtype: RelationType },
+                success: function (response) {
+                    //alert(response);
+                        $("#AddPatientGuardianID").val(response);
+                        var name = $("#AddPatientName").val() + " " + $("#AddPatientSurname").val()
+                    $("#AddPatientGuardianName").val(name);
+
+                   // $("#GuardianID").attr("disabled", "disabled");
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX error: ", error);
+                }
+            });
+        } else {
+                $("#AddPatientGuardianID").val("");
+                $("#AddPatientGuardianName").val("");            
+
+                $("#AddPatientGuardianName").keyup(function (event) {
+                    if (event.which == 13) {
+                        //alert("backspace");
+                    }
+               const searchString = $(this).val();
+                    $("#AddPatientGuardianName").autocomplete({
+                        source: oGuardianNames,
+                        minLength: 3,
+                        select: function (event, ui) {
+                            $.ajax({                                
+                                url: '/OurPatients/GetGurdianData', // Controller action
+                                type: 'POST', // Type of request, can be POST
+                                dataType: 'json', // Expected response type
+                                data: { searchtext: ui.item.label },
+                                success: function (response) {
+                                    var JsonData = response;
+                                    if (JsonData.results) {
+                                        $("#AddPatientGuardianName").val(JsonData.results[0].GuardianPatientName);
+                                        $("#AddPatientGuardianID").val(JsonData.results[0].Id);
+                                    }
+
+                                },
+                                error: function (xhr, status, error) {
+                                    console.error("AJAX error: ", error);
+                                }
+                            });
+                        }
+                    });
+                /*if (searchString.length >= 3) {
+                    $.ajax({
+                        url: '/OurPatients/GetGurdianData', // Controller action
+                        type: 'POST', // Type of request, can be POST
+                        dataType: 'json', // Expected response type
+                        data: { searchtext: searchString },
+                        success: function (response) {                          
+                            var JsonData = response;
+                            if (JsonData.results) {
+                                    $("#AddPatientGuardianName").val(JsonData.results[0].GuardianPatientName);
+                                    $("#AddPatientGuardianID").val(JsonData.results[0].Id);
+                            }
+                           
+                        },
+                        error: function (xhr, status, error) {
+                            console.error("AJAX error: ", error);
+                        }
+                    });
+                }*/
+            });
+        }
+    }
+
+    $(document).ready(function (e) {
+
+        var msg = $("#divError").text();
+        
+        if (msg != "") {
+                $('html, body').animate({ scrollTop: $("#createPatientHeading").offset().top - 100 }, 'slow');
+        }
+        $("#btnSubmitPatient").click(function () {
+            return ValidationControls();
+        });
+   
+       
+        function ValidationControls() {
+            var status = true;
+            var message = "Please fill all the fields marked as mandatory.";
+
+           // alert($("#AddPatientDesignation").val());
+            if ($("#AddPatientMobileNo").val() == "") {
+                status = false;
+            }
+            else if ($("#AddPatientDesignation").val() == "") {
+                status = false;
+            }
+            else if ($("#AddPatientName").val() == "") {
+                status = false;
+            }
+            else if ($("#AddPatientDOB").val() == "") {
+                status = false;
+            }
+            else if ($("#AddPatientGender").val() == "") {
+                status = false;
+            }
+            else if ($("#AddPatientReligion").val() == "") {
+                status = false;
+            }
+            else if ($("#AddPatientRelationGuardian").val() == "") {
+                status = false;
+            }
+            else if ($("#AddPatientGuardianName").val() == "") {
+                status = false;
+            }
+            else if ($("#AddPatientGuardianID").val() == "") {
+                status = false;
+            }
+
+            if (status == false) {
+                $("#divError").html(message);
+                $("#divError").addClass("alert alert-danger");
+                $('html, body').animate({ scrollTop: $("#createPatientHeading").offset().top - 100 }, 'slow');
+                    $("#fldataloader").fadeOut();
+            } else {
+                    $("#fldataloader").fadeIn();
+            }
+            return status;
+        }
+
+    // $("#GuardianName").keyup(function () {
+    //     bItemSelected = false;
+    //     $(this).autocomplete({
+    //         source: oNames,
+    //         minLength: 3,
+    //         select: function (event, ui) {
+    //             if (ui.item) {
+
+    //             }
+    //         }
+    //     });
+
+    // });
+
+ });
+    //$("#GuardianName").keyup(function () {
+    //     $("#frmCreatePatient").on("input paste", "input[id='GuardianName']", function (e) {
+    //     bItemSelected = false;
+    //     $(this).autocomplete({
+    //         source: oNames,
+    //         minLength: 2,
+    //         select: function (event, ui) {
+    //                 if (ui.item) {
+    //                     $.ajax({
+    //                         url: '/OurPatients/GetGurdianData', // Controller action
+    //                         type: 'POST', // Type of request, can be POST
+    //                         dataType: 'json', // Expected response type
+    //                         data: { searchtext: searchString },
+    //                         success: function (response) {
+    //                             //alert(response.results[0]);
+    //                             var JsonData = response;
+    //                             if (JsonData.results) {
+    //                                 $("#GuardianName").val(JsonData.results[0].GuardianPatientName);
+    //                                 $("#GuardianID").val(JsonData.results[0].Id);
+    //                             }
+
+    //                         },
+    //                         error: function (xhr, status, error) {
+    //                             console.error("AJAX error: ", error);
+    //                         }
+    //                     });
+    //                 }
+    //         },
+    //         delay: 500,
+    //             search: function () {
+    //                 $(this).addClass("ui-autocomplete-loading");
+    //                 $(this).next().removeClass("d-none");
+    //             },
+    //             open: function () {
+    //                 $(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+    //                 $(this).next().addClass("d-none");
+    //             },
+    //             close: function () {
+    //                 $(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+
+    //             }
+    //     });
+    // });
+
+        $("#txtsearchname,#txtsearchmobile,#txtsearchguardianname").keyup(function () {
+            const searchString = $(this).val();             
+            //if (searchString.length >= 3) {
+               // $("#btnSearch").trigger('click');                
+           // }
+    });
+
+    // $("#txtsearchmobile").keyup(function () {
+    //     const searchString = $(this).val();
+    //     //alert(searchString);
+    //     if (searchString.length >= 3) {
+        //         $("#btnReset").trigger('click');
+    //     }
+    // });
+
+    var $ = jQuery.noConflict();
+    jQuery(document).ready(function ($) {
+        $("#dvSearchSection").on("input paste", "input[id*='txtsearchmobile']", function (event) {
+            // if (event.which == 13) {
+          //  alert("input paste");
+            // }
+            // alert(event.which);
+            var omobileInput = $(this);
+            var searchMobileNo = omobileInput.val();
+            bItemSelected = false;
+            $(this).autocomplete({
+                source: oMobileNumbers,
+                minLength: 2,
+                select: function (event, ui) {
+                    $(this).val(ui.item.label);
+                    $("#formSearch").submit();
+                        //$("#btnReset").trigger('click');
+                }
+            });
+        });
+
+            $("#dvSearchSection").on("input paste", "input[id*='txtsearchname']", function (event) {
+                // if (event.which == 13) {
+                //  alert("input paste");
+                // }
+                // alert(event.which);
+                var oNameInput = $(this);
+                var searchName = oNameInput.val();
+                bItemSelected = false;
+                $(this).autocomplete({
+                    source: oNameList,
+                    minLength: 3,
+                    select: function (event, ui) {
+                        $(this).val(ui.item.label);
+                        $("#formSearch").submit();
+                    }
+                });
+            });
+
+            $("#dvSearchSection").on("input paste", "input[id*='txtsearchguardianname']", function (event) {
+                // if (event.which == 13) {
+                //  alert("input paste");
+                // }
+                // alert(event.which);
+                var oNameInput = $(this);
+                var searchName = oNameInput.val();
+                bItemSelected = false;
+                $(this).autocomplete({
+                    source: oNameList,
+                    minLength: 3,
+                    select: function (event, ui) {
+                        $(this).val(ui.item.label);
+                        $("#formSearch").submit();
+                    }
+                });
+            });
+
+             $("#btnCreatePatientClear").click(function () {
+            // alert("test");
+                 ClearPatientControls();
+             });
+
+        function ClearPatientControls()
+        {           
+            $("#AddPatientMobileNo").val("");
+            $("#AddPatientNIC").val("");
+            $("#AddPatientPassportNo").val("");
+            $("#AddPatientDesignation").val("");
+            $("#AddPatientName").val("");
+            $("#AddPatientSurname").val("");
+            $("#AddPatientDOB").val("");
+            $("#AddPatientGender").val("");
+            $("#AddPatientResidentArea").val("");
+            $("#AddPatientNationality").val("");            
+            $("#AddPatientReligion").val("");
+            $("#AddPatientRelationGuardian").val("");
+            $("#AddPatientGuardianName").val("");
+            $("#AddPatientGuardianID").val("");
+            $("#AddPatientLoyaltyNo").val("");
+            $("#AddPatientMemberID").val("");
+            $("#AddPatientEmail").val("");
+            $("#AddPatientSpecialConditions").val("");
+            $("#AddPatientSocialId").val("");
+            $("#AddPatientLoyaltyProgramme").val("");
+            $("#AddPatientActive").val("");
+         }
+
+    });
+
+
+</script>
+}

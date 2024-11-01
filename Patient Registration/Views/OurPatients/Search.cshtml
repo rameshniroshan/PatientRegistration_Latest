@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Patient_Registration.Models.Call_Patients>
+
+<div class="container patientsSearch">
+    <h2>Search Patients</h2>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="border border-warning p-3" id="dvSearchSection">
+                <form method="post" asp-action="Search" asp-controller="OurPatients" name="formSearch" id="formSearch">
+                    <div class="mb-3">
+                        <label class="form-label">Name: </label>
+                        <input type="text" name="name" id="txtsearchname" class="form-control"  placeholder="Name" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mobile: </label>
+                        <input type="text" name="mobile" id="txtsearchmobile" class="form-control" placeholder="Mobile" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Guardian Name: </label>
+                        <input type="text" name="guardianName" id="txtsearchguardianname" class="form-control"  placeholder="Guardian Name" />
+                    </div>
+                    <input type="submit" value="Reset" name="btnReset" id="btnReset" class="btn btn-success siteButtons" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+

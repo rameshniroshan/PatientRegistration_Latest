@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Patient_Registration.Models.Call_Patients>
+
+<div class="row listpatientpaddingtop1">
+    @await Html.PartialAsync("Search", Model)
+    </div>
+<div class="container listpatientpaddingtop">
+    <h2>List Patients</h2>
+    <hr />
+    <div class="border border-warning1 p-0 horizontalscroll">
+        <table class="table tblList" id="tblListPatients">
+            <thead>
+                <tr class="tableTopBackColor tblHeadingCenter">
+                    <th>Mobile No</th>
+                    <th>NIC</th>                   
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Guardian Name</th>
+                    <th>Relationship</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {                    
+                    if(item.LoyaltyProgramId == null)
+                        {
+                        <tr class="tblListPatientsRows">
+                            <td>@Html.DisplayFor(modelItem => item.MobileNo)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NIC)</td>
+                            <td class="nowrap">@Html.DisplayFor(modelItem => item.Name)&nbsp;@Html.DisplayFor(modelItem => item.Surname)</td>
+                            <td class ="tblColumnCenter">@Html.DisplayFor(modelItem => item.Gender)</td>
+                            <td class="nowrap">@Html.DisplayFor(modelItem => item.GuardianName)</td>
+                            <td class="tblColumnCenter">@Html.DisplayFor(modelItem => item.RelationGuardian)</td>
+                            <td class="showinsameline">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info patientListActionBtn">Edit</a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success listDetailsbtn patientListActionBtn">Details</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger patientListActionBtn">Delete</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                        }
+                     else
+                        {
+                        <tr class="listPatientLoyaltyDisplay tblListPatientsRows">
+                            <td>@Html.DisplayFor(modelItem => item.MobileNo)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NIC)</td>
+                            <td class="nowrap">@Html.DisplayFor(modelItem => item.Name)&nbsp;@Html.DisplayFor(modelItem => item.Surname)</td>
+                            <td class="tblColumnCenter">@Html.DisplayFor(modelItem => item.Gender)</td>
+                            <td class="nowrap">@Html.DisplayFor(modelItem => item.GuardianName)</td>
+                            <td class="tblColumnCenter">@Html.DisplayFor(modelItem => item.RelationGuardian)</td>
+                            <td class="showinsameline">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info patientListActionBtn">Edit</a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success listDetailsbtn patientListActionBtn">Details</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger patientListActionBtn">Delete</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                    }
+                    
+                   
+                }           
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,215 @@
+﻿@model Patient_Registration.Models.Call_Patients
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+@* <div class="row listpatientpaddingtop">
+    <h2>List Patients</h2>
+    <hr />
+    <div class="border border-warning1 pl-3 horizontalscroll">
+        <table class="table">
+            <thead>
+                <tr class="bg-secondary opacity-50">
+                    <th>Mobile Number</th>
+                    <th>NIC</th>
+                    <th>Name</th>
+                    <th>NIC</th>
+                    <th>Guardian Name</th>
+                </tr>
+
+                 @foreach (var item in Model)
+                {
+                    <tr>
+                        <td></td>
+                    </tr>
+                } 
+            </thead>
+        </table>
+
+                    
+    </div>
+</div> *@
+
+
+@* @await Html.PartialAsync("index") *@
+<div class="row listpatientpaddingtop">
+    <h2>Create Patients</h2>
+    <hr />
+    <div class="col-md-12">
+        <div class="border border-warning p-3 rounded-3">
+        <div>
+            <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row showinsameline">
+                <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="MobileNo" class="control-label marginlr-10"></label>
+                    <input asp-for="MobileNo" class="form-control" />
+                    <span asp-validation-for="MobileNo" class="text-danger"></span>
+                </div>
+
+                <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="NIC" class="control-label marginlr-10"></label>
+                    <input asp-for="NIC" class="form-control" />
+                    <span asp-validation-for="NIC" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="PassportNo" class="control-label marginlr-10"></label>
+                    <input asp-for="PassportNo" class="form-control" />
+                    <span asp-validation-for="PassportNo" class="text-danger"></span>
+                </div>
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="Designation" class="control-label marginlr-10"></label>
+                    <input asp-for="Designation" class="form-control" />
+                    <span asp-validation-for="Designation" class="text-danger"></span>
+                </div>
+            </div>
+                <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="Name" class="control-label marginlr-10"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="Surname" class="control-label marginlr-10"></label>
+                        <input asp-for="Surname" class="form-control" />
+                        <span asp-validation-for="Surname" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="DOB" class="control-label marginlr-10"></label>
+                        <input asp-for="DOB" class="form-control" />
+                        <span asp-validation-for="DOB" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="Gender" class="control-label marginlr-10"></label>
+                        @* <input asp-for="Gender" class="form-control" /> *@
+                        <select id="Gender" name="Gender" class="form-control">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="ResidentArea" class="control-label marginlr-10"></label>
+                        <input asp-for="ResidentArea" class="form-control" />
+                        <span asp-validation-for="ResidentArea" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="Nationality" class="control-label marginlr-10"></label>
+                        <input asp-for="Nationality" class="form-control" />
+                        <span asp-validation-for="Nationality" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="Religion" class="control-label marginlr-10"></label>
+                        @* <input asp-for="Religion" class="form-control" /> *@
+                        <select id="Religion" name="Religion" class="form-control" dropzone="true">
+                            <option value="Buddhist">Buddhist</option>
+                            <option value="Catholic">Catholic</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span asp-validation-for="Religion" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="GuardianID" class="control-label marginlr-10"></label>
+                        @* <input asp-for="GuardianID" class="form-control" /> *@
+                            <select id="GuardianID" name="GuardianID" class="form-control" dropzone="true">
+                                <option value="New">New</option>
+                                
+                            </select>
+                        <span asp-validation-for="GuardianID" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="GuardianName" class="control-label marginlr-10"></label>
+                        <input asp-for="GuardianName" class="form-control" />
+                        <span asp-validation-for="GuardianName" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="RelationGuardian" class="control-label marginlr-10"></label>
+                        @*  <input asp-for="RelationGuardian" class="form-control" /> *@
+                        <select id="RelationGuardian" name="RelationGuardian" class="form-control" dropzone="true">
+                            <option value="Self">Self</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Father">Father</option>
+                            <option value="Son">Son</option>
+                            <option value="Daughter">Daughter</option>
+                            <option value="Next or Kind">Next Of Kin</option>
+                            <option value="Friend">Friend</option>
+                        </select>
+                        <span asp-validation-for="RelationGuardian" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="LoyaltyNo" class="control-label marginlr-10"></label>
+                        <input asp-for="LoyaltyNo" class="form-control" />
+                        <span asp-validation-for="LoyaltyNo" class="text marginlr-10"></span>
+                    </div>
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="MemberID" class="control-label marginlr-10"></label>
+                        <input asp-for="MemberID" class="form-control" />
+                        <span asp-validation-for="MemberID" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="Email" class="control-label marginlr-10"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="SpecialConditions" class="control-label marginlr-10"></label>
+                        @* <input asp-for="SpecialConditions" class="form-control" /> *@
+                        <select id="SpecialConditions" name="SpecialConditions" class="form-control" dropzone="true">
+                            <option value="Disable">Disable</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Staff">Staff</option>
+                            <option value="Consultant">Consultant</option>
+                        </select>
+                        <span asp-validation-for="SpecialConditions" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row showinsameline">
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="SocialId" class="control-label marginlr-10"></label>
+                        <input asp-for="SocialId" class="form-control" />
+                        <span asp-validation-for="SocialId" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-5 form-group toplogoandgreentext">
+                        <label asp-for="FamilyId" class="control-label marginlr-10"></label>
+                        <input asp-for="FamilyId" class="form-control" />
+                        <span asp-validation-for="FamilyId" class="text-danger"></span>
+                    </div>
+                </div>               
+                
+                
+            <div class="form-group mt-4">
+                        <div class="marginlr-10">
+                    <input type="submit" value="Create" class="btn btn-success" />
+                    <input class="btn btn-warning btnClear" type="button" value="Clear" />
+                        </div>
+            </div>
+        </form>
+            </div>
+    </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

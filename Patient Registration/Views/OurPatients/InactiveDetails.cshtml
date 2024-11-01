@@ -1,0 +1,65 @@
+﻿@model Patient_Registration.Models.Call_Patients
+
+@{
+    ViewData["Title"] = "Inactive Patient Details";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+
+
+<div>
+    <h2>Details of Inactive Patient</h2>
+    <hr />
+    <div class="row border border-warning p-4 rounded-3 patientdetails" id="patientDetails">
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.NIC)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.NIC)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.PassportNo)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.PassportNo)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Designation)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Designation)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.Name)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.Name)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Surname)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Surname)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.DOB)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.DOB)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Gender)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Gender)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.ResidentArea)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.ResidentArea)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.Nationality)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.Nationality)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.Religion)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.Religion)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.GuardianID)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.GuardianID)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.GuardianName)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.GuardianName)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.RelationGuardian)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.RelationGuardian)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.LoyaltyNo)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.LoyaltyNo)</div>
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.MemberID)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.MemberID)</div>
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.Email)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.Email)</div>
+
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.SpecialConditions)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.SpecialConditions)</div>
+
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.SocialId)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.SocialId)</div>
+
+        <div class="col-sm-3 oddrow fw-bold">@Html.DisplayNameFor(model => model.LoyaltyProgramId)</div>
+        <div class="col-sm-9 oddrow">@Html.DisplayFor(model => model.LoyaltyProgramId)</div>
+
+        <div class="col-sm-3 evenrow fw-bold">@Html.DisplayNameFor(model => model.Active)</div>
+        <div class="col-sm-9 evenrow">@Html.DisplayFor(model => model.Active)</div>
+
+        <div class="pl-0">
+            <a class="btn btn-success patientDetailsEdit siteButtons" ) asp-action="InactiveEdit" asp-route-id="@Model?.Id">Edit</a>
+        </div>
+    </div>
+    <a class="btn btn-warning mt-4 mb-4 patientdetailsback btnbacktoList" asp-action="InactivePatients">Back to List</a>
+   
+</div>
+

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Patient_Registration.Models.Call_LoyaltyPrograms>
+
+@{
+    ViewData["Title"] = "List Loyalty Programmes";
+    Layout = "~/Views/Shared/_LayoutLogged.cshtml";
+}
+<div class="loyaltysection">
+<h2>Loyalty Programmes</h2>
+<hr />
+<p>
+    <a asp-action="Create" class="btn btn-success btnchangepassword">Create New</a>
+</p>
+
+<div class="border border-warning1 p-0 ">
+    <table class="table tblList">
+    <thead>
+            <tr class="tableTopBackColor">
+            <th>
+                Loyalty Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Active
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+                    <tr class="tblListRowsStyles">
+            <td>
+                @Html.DisplayFor(modelItem => item.LoyaltyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoyaltyDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info ListActionBtn">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-success listDetailsbtn ListActionBtn">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger ListActionBtn">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div></div>
